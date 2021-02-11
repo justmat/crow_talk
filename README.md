@@ -1,2 +1,5 @@
 # crow_talk
-talk to crow with norns
+
+![](assets/crow_talk-m.png)
+
+use norns to talk to crow
