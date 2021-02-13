@@ -31,6 +31,11 @@ function keyboard.code(code,value)
         end
         my_string = history[history_index]
       end
+    elseif code == "DOWN" then
+      if #history > 0 and history_index ~= nil then -- make sure there is a history, and we are accessing it
+        history_index = util.clamp(history_index + 1, 1, #history) -- decrement history_index
+        my_string = history[history_index]
+      end
     elseif code == "ENTER" then
       crow.send(my_string) -- send command to crow
       table.insert(history, my_string) -- append the command to history
